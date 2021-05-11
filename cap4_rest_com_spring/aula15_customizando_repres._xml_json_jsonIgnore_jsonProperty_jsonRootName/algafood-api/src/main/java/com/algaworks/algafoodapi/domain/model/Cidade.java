@@ -1,26 +1,25 @@
-package com.algaworks.algafood.domain.model;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
+package com.algaworks.algafoodapi.domain.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@JsonRootName("gastronomia") //Fica mais visivel no xml
-public class Cozinha implements Serializable {
+public class Cidade implements Serializable {
+
+
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonProperty(value = "titulo") //Seta apenas na representacao - postman
-    //@JsonIgnore // nao aparece na representacao
     @Column(nullable = false)
     private String nome;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Estado estado;
 
     public Long getId() {
         return id;
@@ -38,16 +37,25 @@ public class Cozinha implements Serializable {
         this.nome = nome;
     }
 
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Cozinha cozinha = (Cozinha) o;
-        return id.equals(cozinha.id);
+        Cidade cidade = (Cidade) o;
+        return id.equals(cidade.id);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }

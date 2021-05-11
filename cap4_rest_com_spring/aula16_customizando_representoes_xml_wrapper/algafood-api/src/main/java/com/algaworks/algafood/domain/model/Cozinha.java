@@ -5,21 +5,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@JsonRootName("gastronomia") //Fica mais visivel no xml
-public class Cozinha implements Serializable {
-    private static final long serialVersionUID = 1L;
+@JsonRootName("cozinha")
+public class Cozinha {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonProperty(value = "titulo") //Seta apenas na representacao - postman
-    //@JsonIgnore // nao aparece na representacao
-    @Column(nullable = false)
     private String nome;
 
     public Long getId() {

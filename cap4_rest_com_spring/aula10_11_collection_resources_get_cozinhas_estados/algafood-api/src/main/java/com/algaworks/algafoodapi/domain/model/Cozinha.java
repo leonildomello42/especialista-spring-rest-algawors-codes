@@ -1,25 +1,21 @@
-package com.algaworks.algafood.domain.model;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
+package com.algaworks.algafoodapi.domain.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@JsonRootName("gastronomia") //Fica mais visivel no xml
+@Table(name = "cozinha")
+
 public class Cozinha implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonProperty(value = "titulo") //Seta apenas na representacao - postman
-    //@JsonIgnore // nao aparece na representacao
-    @Column(nullable = false)
+    @Column(name = "nome")
     private String nome;
 
     public Long getId() {
