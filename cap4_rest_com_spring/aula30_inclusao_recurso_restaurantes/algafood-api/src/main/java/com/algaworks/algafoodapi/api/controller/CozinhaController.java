@@ -80,10 +80,12 @@ public class CozinhaController {
 
         }
         catch (EntidadeEmUsoException e){
+            System.out.println(e.getMessage());
             return ResponseEntity.status(HttpStatus.CONFLICT).build();
         }
 
         catch (EntidadeNaoEncontradaException e){
+            System.out.println(e.getMessage());
             return ResponseEntity.notFound().build();
         }
     }
