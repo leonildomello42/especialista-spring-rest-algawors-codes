@@ -28,11 +28,9 @@ public class Cozinha implements Serializable {
     @OneToMany(mappedBy = "cozinha")
     private List<Restaurante> restaurantes = new ArrayList<>();
 
-
     public Long getId() {
         return id;
     }
-
 
     public void setId(Long id) {
         this.id = id;

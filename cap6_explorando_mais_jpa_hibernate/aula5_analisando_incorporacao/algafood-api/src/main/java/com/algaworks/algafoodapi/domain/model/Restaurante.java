@@ -36,6 +36,7 @@ public class Restaurante implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "forma_pagamento_id"))
     private List<FormaPagamento> formasPagamento = new ArrayList<>();
 
+    @JsonIgnore
     @Embedded
     private Endereco endereco;
 
