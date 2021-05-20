@@ -65,6 +65,7 @@ public class RestauranteController {
         try{
             return cadastroRestaurante.salvar(restauranteAtual);
         }
+        
 
         catch (EntidadeNaoEncontradaException e ){
             throw new NegocioException(e.getMessage());
