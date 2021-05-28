@@ -3,18 +3,17 @@ package com.algaworks.algafoodapi.domain.model;
 import com.algaworks.algafoodapi.Groups;
 
 import javax.persistence.*;
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import javax.validation.groups.ConvertGroup;
-import javax.validation.groups.Default;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class Cidade implements Serializable {
+public class Estado implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @NotNull(groups = Groups.EstadoId.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,12 +21,6 @@ public class Cidade implements Serializable {
     @NotBlank
     @Column(nullable = false)
     private String nome;
-
-    @Valid
-    @ConvertGroup(from = Default.class, to = Groups.EstadoId.class)
-    @ManyToOne
-    @JoinColumn(name = "estado_id",nullable = false)
-    private Estado estado;
 
     public Long getId() {
         return id;
@@ -45,21 +38,12 @@ public class Cidade implements Serializable {
         this.nome = nome;
     }
 
-    public Estado getEstado() {
-        return estado;
-    }
-
-    public void setEstado(Estado estado) {
-        this.estado = estado;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Cidade cidade = (Cidade) o;
-        return id.equals(cidade.id);
-
+        Estado estado = (Estado) o;
+        return id.equals(estado.id);
     }
 
     @Override

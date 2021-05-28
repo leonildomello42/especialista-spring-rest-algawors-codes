@@ -30,7 +30,7 @@ public class Restaurante implements Serializable {
 
     //@NotNull
     //@NotEmpty
-    @NotBlank(message = "Nome é obrigatório")
+    @NotBlank
     @Column(nullable = false)
     private String nome;
 
@@ -44,6 +44,7 @@ public class Restaurante implements Serializable {
     private Cozinha cozinha;
 
     //@DecimalMin("0")
+    @NotNull
     @PositiveOrZero
     @Column(name = "taxa_Frete")
     private BigDecimal taxaFrete;

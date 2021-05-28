@@ -1,17 +1,13 @@
 package com.algaworks.algafoodapi.domain.model;
 
-import com.algaworks.algafoodapi.Groups;
-
 import javax.persistence.*;
-import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
-import javax.validation.groups.ConvertGroup;
-import javax.validation.groups.Default;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-public class Cidade implements Serializable {
+public class Grupo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -19,15 +15,13 @@ public class Cidade implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
     @Column(nullable = false)
     private String nome;
 
-    @Valid
-    @ConvertGroup(from = Default.class, to = Groups.EstadoId.class)
-    @ManyToOne
-    @JoinColumn(name = "estado_id",nullable = false)
-    private Estado estado;
+    @ManyToMany
+    @JoinTable(name = "grupo_permissao", joinColumns = @JoinColumn(name = "grupo_id"),
+            inverseJoinColumns = @JoinColumn(name = "permissao_id"))
+    private List<Permissao> permissoes = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -45,26 +39,24 @@ public class Cidade implements Serializable {
         this.nome = nome;
     }
 
-    public Estado getEstado() {
-        return estado;
+    public List<Permissao> getPermissoes() {
+        return permissoes;
     }
 
-    public void setEstado(Estado estado) {
-        this.estado = estado;
+    public void setPermissoes(List<Permissao> permissoes) {
+        this.permissoes = permissoes;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Cidade cidade = (Cidade) o;
-        return id.equals(cidade.id);
-
+        Grupo grupo = (Grupo) o;
+        return id.equals(grupo.id);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
-
 }
