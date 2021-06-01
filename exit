@@ -1,0 +1,66 @@
+[33ma8bf306[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m Customizando mensagens
+[33maab8963[m Validando associacoes
+[33ma4f3473[m Cap 9 bean validation
+[33m82b4569[m Finalizando cap8 - tratamento e modelagem de erros na API
+[33m253f40f[m Tratando outras excecoes
+[33m15e19a2[m Lançando exception de desserialização na atualização parcial (PATCH)
+[33m7ca29a9[m tratando a PropertyBindingException na desserialização
+[33m35fe3f2[m Tratando a exception InvalidFormatException na desserialização
+[33me90a68d[m Customizando exception handler ResponseEntityExceptionHandler
+[33ma686d8f[m Padronizando resposta das excecoes
+[33m08bf43b[m trabalhando com ExceptionHandler
+[33mc0c8ce2[m ratando exceções globais com ExceptionHandler e ControllerAdvice
+[33mb00f7cc[m Tratando exceções em nível de controlador com @ExceptionHandler
+[33m5cc775f[m Lançando exceptions de granularidade fina
+[33mbfdc63e[m Granularidade das exception
+[33mf5aa7f6[m NegocioException
+[33mab74e78[m Refatorando REST
+[33mf250a2c[m Refatorando REST
+[33m47c4197[m ResponseStatusException
+[33med71d51[m Cap8 tratando e modelando erros na api
+[33m49f792f[m Mepeando entidades itemPedido e Pedido
+[33ma124c14[m Finalizando com flyway
+[33m18bca6d[m Finalizando a migracao de tabelas flyway
+[33mea23984[m Migração com flyway
+[33ma7e3ece[m Finalizando cap6
+[33m76f0718[m Mapeando relacionamento muitos para um
+[33m4b85aa6[m Mapeando propriedades com  CreationTimestamp e  UpdateTimestamp
+[33m2d8c310[m 6.5. Testando e analisando o impacto da incorporação de classe na REST API
+[33m6c2669d[m relacionamentos
+[33ma2e15ba[m Corrigindo projetos
+[33mdb01b09[m Mapeando relacionamento muitos-para-muitos com ManyToMany
+[33m1536efc[m Mapeando relacionamento muitos-para-muitos com @ManyToMany
+[33mebc0a50[m Mapeando relacionamento bidirecional com @OneToMany
+[33m431d9b9[m Estendendo o JpaRepository para customizar o repositório base
+[33mc36b0db[m Injetando o próprio repositório na implementação customizada e a anotação @Lazy
+[33m870932f[m Criando Epecifications
+[33mbe6306f[m Criteia api
+[33mbf89c55[m Implementando uma consulta dinâmica com JPQL
+[33m26983a4[m Repositório customizado com jpql
+[33mc3d4fd2[m Passando as consultas para xml
+[33m72f226b[m Query methods
+[33m5609491[m Refatorando todos os repositorios sdj
+[33m4baf148[m Refatorando repositorio Cozinhas, para JPA Repository
+[33m7e1d49b[m Implementando consultas JPQL em repositórios
+[33mc5648aa[m PATCH recurso restaurante
+[33m17840d5[m REST de estados e cidades
+[33m6033d4c[m atualizacao de recursos restaurantes
+[33m8cb6d41[m Refatorando
+[33m51bd33f[m pesquisa restaurantes
+[33m1850b90[m Refatorando delete
+[33ma5a0464[m Padrão Domain Service DDD
+[33mb8c2d51[m Corrigindo nomes dos diretorios
+[33m8fc9c91[m Completando CRUD cozinhas
+[33mb2ae33f[m Trabalhando com xml e json
+[33mea449bc[m Mapeando entidades
+[33m89e236b[m ManyToOne, JoinColmun, nullable
+[33m076c6b6[m CRUD cozinha teste
+[33m18e7d0d[m Código das aulas 5 6 e 7. Criando tabelas a partir das entidades, mapeando o Id da entidade para autoincremento, dados de teste com import.sql
+[33mdbb8bc6[m Mapeando o id da entidade para autoincremento
+[33maaa8e94[m Mapeando entidades com JPA
+[33m141be3a[m Corrigindo commit anterior com códicos trocados das aulas
+[33meca9544[m Adicionando JPA e configurando o Data Source
+[33m6fcaeb2[m Codes cap2: spring e inj de dependências
+[33m16d75ae[m dumb to dump
+[33ma2cb0b7[m First codes
+[33m479cc2d[m First commit add README and .gitignore
