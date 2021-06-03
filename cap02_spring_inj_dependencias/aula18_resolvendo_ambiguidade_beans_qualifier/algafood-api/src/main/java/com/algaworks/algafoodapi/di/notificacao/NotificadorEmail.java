@@ -11,8 +11,6 @@ import com.algaworks.algafoodapi.di.modelo.Cliente;
 @Component
 public class NotificadorEmail implements Notificador {
 	
-
-	
 	@Override
 	public void notificar(Cliente cliente, String mensagem) {
 		

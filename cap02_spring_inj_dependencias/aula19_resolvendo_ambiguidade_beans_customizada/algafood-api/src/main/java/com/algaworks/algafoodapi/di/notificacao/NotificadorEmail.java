@@ -10,7 +10,6 @@ import com.algaworks.algafoodapi.di.modelo.Cliente;
 @TipoDoNotificador(NivelUrgencia.NORMAL)
 @Component
 public class NotificadorEmail implements Notificador {
-	
 
 	
 	@Override

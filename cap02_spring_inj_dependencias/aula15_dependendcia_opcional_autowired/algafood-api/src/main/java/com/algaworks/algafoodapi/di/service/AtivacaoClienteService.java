@@ -14,18 +14,14 @@ public class AtivacaoClienteService {
 	private Notificador notificador;
 	
 	public void ativar(Cliente cliente) {
+
 		cliente.ativar();
-		
+
 		if(notificador != null) {
-			
 			notificador.notificar(cliente, "Seu cadastro no sistema está ativo!");
 		}
 		else {
-			
 			System.out.println("Não existe instacia de notificador");
 		}
-
 	}
-
-	
 }

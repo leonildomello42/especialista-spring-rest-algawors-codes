@@ -9,8 +9,6 @@ import com.algaworks.algafoodapi.di.modelo.Cliente;
 @Component
 public class NotificadorSMS implements Notificador {
 	
-
-	
 	@Override
 	public void notificar(Cliente cliente, String mensagem) {
 		
