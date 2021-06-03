@@ -2,7 +2,6 @@ package com.algaworks.di;
 
 import com.algaworks.di.modelo.Cliente;
 import com.algaworks.di.modelo.Produto;
-import com.algaworks.di.notificacao.NotificadorEmail;
 import com.algaworks.di.notificacao.NotificadorSMS;
 import com.algaworks.di.service.AtivacaoClienteService;
 import com.algaworks.di.service.EmissaoNotaFiscalService;
