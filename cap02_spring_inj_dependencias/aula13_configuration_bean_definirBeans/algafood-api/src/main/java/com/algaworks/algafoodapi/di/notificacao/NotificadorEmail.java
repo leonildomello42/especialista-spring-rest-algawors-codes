@@ -27,7 +27,6 @@ public class NotificadorEmail implements Notificador {
 	public void notificar(Cliente cliente, String mensagem) {
 		
 		if(this.caixaAlta=true) {
-			
 			mensagem = mensagem.toUpperCase();
 		}
 		

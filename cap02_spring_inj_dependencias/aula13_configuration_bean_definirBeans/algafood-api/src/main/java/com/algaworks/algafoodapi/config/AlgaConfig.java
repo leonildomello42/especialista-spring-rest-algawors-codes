@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.algaworks.algafoodapi.di.notificacao.NotificadorEmail;
 import com.algaworks.algafoodapi.di.service.AtivacaoClienteService;
+import org.springframework.context.annotation.Configuration;
 
 //@Configuration
 public class AlgaConfig {
