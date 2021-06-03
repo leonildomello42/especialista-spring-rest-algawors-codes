@@ -8,7 +8,6 @@ import com.algaworks.algafoodapi.di.modelo.Cliente;
 public class NotificadorEmail implements Notificador {
 	
 	public NotificadorEmail() {
-		
 		System.out.println("NotificadorEmail!");
 	}
 	

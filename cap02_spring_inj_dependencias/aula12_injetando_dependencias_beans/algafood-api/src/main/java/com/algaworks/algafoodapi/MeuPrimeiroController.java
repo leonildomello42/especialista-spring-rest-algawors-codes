@@ -13,8 +13,8 @@ public class MeuPrimeiroController {
 	AtivacaoClienteService ativacaoClienteService;
 	
 	public MeuPrimeiroController(AtivacaoClienteService ativacaoClienteService) {
+
 		this.ativacaoClienteService = ativacaoClienteService;
-		
 		System.out.println("MeuPrimeiroController");
 	}
 
@@ -22,11 +22,9 @@ public class MeuPrimeiroController {
 	@GetMapping("/hello")
 	@ResponseBody
 	public String hello() {
-		
+
 		Cliente joao = new Cliente("joao", "joao@email.com", "9999999999");
 		ativacaoClienteService.ativar(joao);
-
 		return "hello";
 	}
-
 }
