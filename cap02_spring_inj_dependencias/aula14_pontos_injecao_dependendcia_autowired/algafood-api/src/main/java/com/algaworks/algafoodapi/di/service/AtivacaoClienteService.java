@@ -22,17 +22,11 @@ public class AtivacaoClienteService {
 //		this.notificador = notificador;
 //	}
 	
-	
-
 
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
-
 		notificador.notificar(cliente, "Seu cadastro no sistema está ativo!");
-		
 	}
-
-
 
 	//Ponto de injecao 3
 //	@Autowired
