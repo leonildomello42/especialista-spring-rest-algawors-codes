@@ -20,7 +20,6 @@ public class NotificadorEmail implements Notificador {
 	@Value("${notificador.email.porta-servidor}")
 	private Integer porta;
 	
-	
 	@Override
 	public void notificar(Cliente cliente, String mensagem) {
 
