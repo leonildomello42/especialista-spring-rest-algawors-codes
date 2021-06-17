@@ -22,6 +22,7 @@ public class Restaurante implements Serializable {
     private BigDecimal taxaFrete;
 
     @ManyToOne
+    @JoinColumn(name = "cozinha_id")
     private Cozinha cozinha;
 
     public Restaurante() {
