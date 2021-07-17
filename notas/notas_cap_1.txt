@@ -1,0 +1,14 @@
+
+#Configuracao
+
+-- JDK 11
+-- Intellij
+
+
+#Observacoes e cofiguracoes sobre o capitulo 1.
+
+-- Ler conceitos sobre REST API (Web Services).
+-- Como consumir API's externas.
+-- REST
+
+
