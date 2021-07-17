@@ -1,0 +1,6 @@
+#Observacoes e cofiguracoes sobre o capitulo 2
+
+#Observacoes
+
+-- Ler ecossistema spring.
+-- spring vcs Jakarta EE ou Java EE (Especificacoes)
