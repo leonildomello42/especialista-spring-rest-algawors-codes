@@ -5,3 +5,4 @@
 -- Ler ecossistema spring.
 -- spring vcs Jakarta EE ou Java EE (Especificacoes)
 -- Maven
+-- Injecao de dependencias
