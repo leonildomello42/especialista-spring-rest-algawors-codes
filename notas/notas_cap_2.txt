@@ -6,3 +6,5 @@
 -- spring vcs Jakarta EE ou Java EE (Especificacoes)
 -- Maven
 -- Injecao de dependencias
+-- spring profiles: https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+--
