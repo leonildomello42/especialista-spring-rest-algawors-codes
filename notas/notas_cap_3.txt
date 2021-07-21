@@ -1,0 +1,5 @@
+#Observacoes e cofiguracoes sobre o capitulo 2
+
+-- Java EE
+-- JPA ( https://app.algaworks.com/aulas/1816/o-que-e-jpa-e-hibernate ) 
+-- Documentacao ( https://dev.mysql.com/doc/connector-j/5.1/en/ )
