@@ -1,3 +1,6 @@
 #Observacoes e cofiguracoes sobre o capitulo 4
 
 -- Especificacoes REST
+-- Verbos HTTP
+-- https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
+-- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
