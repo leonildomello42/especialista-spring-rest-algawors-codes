@@ -1,0 +1,3 @@
+#Observacoes e cofiguracoes sobre o capitulo 4
+
+-- Especificacoes REST
