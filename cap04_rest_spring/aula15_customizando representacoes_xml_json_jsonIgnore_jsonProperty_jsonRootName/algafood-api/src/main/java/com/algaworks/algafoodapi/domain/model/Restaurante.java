@@ -1,17 +1,13 @@
 package com.algaworks.algafoodapi.domain.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
-
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
-@Table(name = "cozinha")
-@JsonRootName("gastronomia") //apenas xml
-public class Cozinha implements Serializable {
+@Table(name = "restaurante")
+public class Restaurante implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -19,10 +15,15 @@ public class Cozinha implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnore
-//    @JsonProperty(value = "cozinha_retorno")
-    @Column(name = "nome", nullable = false)
+    @Column(nullable = false)
     private String nome;
+
+    @Column(name = "taxa_frete", nullable = false)
+    private BigDecimal taxaFrete;
+
+    @ManyToOne
+    @JoinColumn(name = "cozinha_id", nullable = false)
+    private Cozinha cozinha;
 
     public Long getId() {
         return id;
@@ -40,12 +41,28 @@ public class Cozinha implements Serializable {
         this.nome = nome;
     }
 
+    public BigDecimal getTaxaFrete() {
+        return taxaFrete;
+    }
+
+    public void setTaxaFrete(BigDecimal taxaFrete) {
+        this.taxaFrete = taxaFrete;
+    }
+
+    public Cozinha getCozinha() {
+        return cozinha;
+    }
+
+    public void setCozinha(Cozinha cozinha) {
+        this.cozinha = cozinha;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Cozinha cozinha = (Cozinha) o;
-        return id.equals(cozinha.id);
+        Restaurante that = (Restaurante) o;
+        return id.equals(that.id);
     }
 
     @Override
