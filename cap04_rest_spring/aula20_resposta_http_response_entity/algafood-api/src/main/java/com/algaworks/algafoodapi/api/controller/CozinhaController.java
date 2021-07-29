@@ -4,8 +4,10 @@ import com.algaworks.algafoodapi.api.model.CozinhasXmlWrapper;
 import com.algaworks.algafoodapi.domain.model.Cozinha;
 import com.algaworks.algafoodapi.domain.repository.CozinhaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,10 +30,26 @@ public class CozinhaController {
         return new CozinhasXmlWrapper(cozinhaRepository.listar());
     }
 
-    @ResponseStatus(HttpStatus.CREATED)
+//    @ResponseStatus(HttpStatus.CREATED)
+
     @GetMapping(value = "/{cozinhaId}")
-    public Cozinha buscar(@PathVariable("cozinhaId") Long id){
-        return cozinhaRepository.buscar(id);
+    public ResponseEntity<Cozinha> buscar(@PathVariable("cozinhaId") Long id){
+
+        Cozinha cozinha = cozinhaRepository.buscar(id);
+
+//        return ResponseEntity.ok(cozinha);
+//        return ResponseEntity.status(HttpStatus.OK).build();
+//        return ResponseEntity.ok();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.LOCATION, "http://localhost:8080/cozinhas");
+
+        return ResponseEntity.status(HttpStatus.FOUND)
+                .headers(headers)
+                .build();
+
+//        return ResponseEntity.status(HttpStatus.OK).body(cozinha);
+
     }
 
 }
