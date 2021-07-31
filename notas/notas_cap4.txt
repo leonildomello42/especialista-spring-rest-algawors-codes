@@ -5,3 +5,4 @@
 -- https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml
 -- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
 -- padrao builder
+-- https://blog.algaworks.com/serialversionuid/
