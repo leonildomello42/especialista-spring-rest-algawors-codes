@@ -7,7 +7,10 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
-public class ExclusaoCozinhaMain {
+import java.util.Iterator;
+import java.util.List;
+
+public class ConsultaCozinhaMain {
 
     public static void main(String[] args) {
 
@@ -16,11 +19,18 @@ public class ExclusaoCozinhaMain {
                 .run(args);
 
         CozinhaRepository cadastroCozinha =  applicationContext.getBean(CozinhaRepository.class);
+        List<Cozinha> cozinhas =  cadastroCozinha.listar();
 
-        Cozinha cozinha = new Cozinha();
-        cozinha.setId(1L);
+        for (Cozinha cozinha : cozinhas){
+            System.out.println(cozinha.getNome());
+        }
 
-        cadastroCozinha.remover(cozinha.getId());
+        System.out.println("----------------------");
 
+        Iterator<Cozinha> iterator = cozinhas.iterator();
+
+        while (iterator.hasNext()){
+            System.out.println(iterator.next().getNome());
+        }
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
-public class ExclusaoCozinhaMain {
+public class BuscaCozinhaMain {
 
     public static void main(String[] args) {
 
@@ -16,11 +16,8 @@ public class ExclusaoCozinhaMain {
                 .run(args);
 
         CozinhaRepository cadastroCozinha =  applicationContext.getBean(CozinhaRepository.class);
+        Cozinha cozinha =  cadastroCozinha.buscar(1L);
 
-        Cozinha cozinha = new Cozinha();
-        cozinha.setId(1L);
-
-        cadastroCozinha.remover(cozinha.getId());
-
+        System.out.printf(" %d - %s\n", cozinha.getId(), cozinha.getNome());
     }
 }

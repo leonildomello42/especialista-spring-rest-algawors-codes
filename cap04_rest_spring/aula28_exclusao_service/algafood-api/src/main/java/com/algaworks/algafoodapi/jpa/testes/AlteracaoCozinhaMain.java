@@ -7,7 +7,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
-public class ExclusaoCozinhaMain {
+public class AlteracaoCozinhaMain {
 
     public static void main(String[] args) {
 
@@ -19,8 +19,13 @@ public class ExclusaoCozinhaMain {
 
         Cozinha cozinha = new Cozinha();
         cozinha.setId(1L);
+        cozinha.setNome("Brasilseira");
 
-        cadastroCozinha.remover(cozinha.getId());
+
+        cozinha = cadastroCozinha.salvar(cozinha);
+
+        System.out.printf(" %d - %s\n", cozinha.getId(), cozinha.getNome());
+
 
     }
 }
