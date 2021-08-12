@@ -1,6 +1,7 @@
 #Observacoes e cofiguracoes sobre o capitulo 3
 
 -- Java EE
+-- https://blog.algaworks.com/entendendo-o-equals-e-hashcode/
 -- JPA ( https://app.algaworks.com/aulas/1816/o-que-e-jpa-e-hibernate ) 
 -- Documentacao ( https://dev.mysql.com/doc/connector-j/5.1/en/ )
 -- https://blog.algaworks.com/tutorial-jpa/
