@@ -8,4 +8,4 @@
 -- https://blog.algaworks.com/serialversionuid/
 -- ObjectMapper
 -- Reflections
--- 
+-- Ler métodos HTTP
