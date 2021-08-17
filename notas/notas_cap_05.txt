@@ -1,0 +1,4 @@
+#Observacoes e cofiguracoes sobre o capitulo 5
+
+-- Ler sobre createQuery (jpql)
+-- Spring Data (JPA)
