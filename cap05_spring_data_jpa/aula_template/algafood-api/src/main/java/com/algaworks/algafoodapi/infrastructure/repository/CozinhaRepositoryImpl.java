@@ -12,12 +12,12 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
-public class CozinhaRepositoryImpl implements CozinhaRepository {
+public class CozinhaRepositoryImpl {
 
     @PersistenceContext
     private EntityManager manager;
 
-    @Override
+//    @Override
     public List<Cozinha> listar(){
 
         TypedQuery<Cozinha> query = manager.createQuery("FROM Cozinha ", Cozinha.class);
@@ -33,7 +33,7 @@ public class CozinhaRepositoryImpl implements CozinhaRepository {
 //        return query.getResultList();
 //    }
 
-    @Override
+//    @Override
     public List<Cozinha> consultarPorNome(String nome) {
 
         TypedQuery<Cozinha> query = manager.createQuery("FROM Cozinha WHERE nome LIKE :nome", Cozinha.class)
@@ -42,20 +42,20 @@ public class CozinhaRepositoryImpl implements CozinhaRepository {
         return query.getResultList();
     }
 
-    @Override
+//    @Override
     public Cozinha buscar(Long id){
 
         return manager.find(Cozinha.class, id);
     }
 
     @Transactional
-    @Override
+//    @Override
     public Cozinha salvar(Cozinha cozinha){
         return manager.merge(cozinha);
     }
 
     @Transactional
-    @Override
+//    @Override
     public void remover(Long id){
         Cozinha cozinha = buscar(id);
 
