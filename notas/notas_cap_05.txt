@@ -2,4 +2,4 @@
 
 -- Ler sobre createQuery (jpql)
 -- Spring Data (JPA)
--- Optional - 
+-- Optional - https://blog.algaworks.com/chega-de-nullpointerexception/
