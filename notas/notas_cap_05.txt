@@ -6,3 +6,5 @@
 -- query methods
 -- keywords query methods - https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation
 -- https://www.infoq.com/br/articles/java-10-var-type/
+-- Criteria API
+
